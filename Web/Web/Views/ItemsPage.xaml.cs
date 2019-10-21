@@ -51,13 +51,20 @@ namespace Web.Views
             await Navigation.PushModalAsync(new NavigationPage(new NewItemPage()));
         }
         async void AddMyCity_Clicked(object sender, EventArgs e) {
+
             try
             {
                 viewModel.IsLoading = true;
-                var request = new GeolocationRequest(GeolocationAccuracy.Medium);
+                var request = new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromSeconds(10));
+                
+
+                //var request = new GeolocationRequest(GeolocationAccuracy.Low, new TimeSpan(10));
+                Console.WriteLine("Middle");
                 CityByGeo response;
                 String cityName;
                 var location = await Geolocation.GetLocationAsync(request);
+                Console.WriteLine("End");
+
                 if (location != null)
                 {
                     Console.WriteLine($"Latitude: {location.Latitude.ToString()}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
@@ -72,7 +79,8 @@ namespace Web.Views
                     }
                 }
                 else {
-                    Notifier.ShortAlert("Не удалось определить местоположение");
+                    Notifier.ShortAlert("Не удалось определить местоположение, возможно нужно сменить гео-режим");
+                    
                     viewModel.IsLoading = false;
                 }
             }

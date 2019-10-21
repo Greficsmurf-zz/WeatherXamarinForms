@@ -50,6 +50,7 @@ namespace Web.ViewModels
 
         }
         public async void AddMyCity(String cityName) {
+
             var response = await DataStore.requestMaker(cityName);
             if (!response.name.Equals("404"))
             {
