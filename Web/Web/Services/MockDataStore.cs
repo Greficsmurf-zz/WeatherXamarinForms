@@ -64,8 +64,15 @@ namespace Web.Services
             if (response.IsSuccessStatusCode) {
                 var responseContent = response.Content.ReadAsStringAsync();
                 var responseJson = JsonConvert.DeserializeObject<CityResponse>(responseContent.Result);
-                responseJson.wind.deg = windDirs[(int)Math.Round(float.Parse(responseJson.wind.deg) / 45)];
-                //cityResponses.Add(responseJson);
+                Console.WriteLine(responseJson.wind.deg + "CITYANME");
+                try
+                {
+                    responseJson.wind.deg = windDirs[(int)Math.Round(float.Parse(responseJson.wind.deg) / 45)];
+                }
+                catch (Exception e) {
+                    Console.WriteLine(e.ToString());
+                    responseJson.wind.deg = "Нет данных";
+                }
                 return responseJson;
             }
             return new CityResponse(){ name = "404"};

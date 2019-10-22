@@ -60,7 +60,7 @@ namespace Web.Views
 
                 //var request = new GeolocationRequest(GeolocationAccuracy.Low, new TimeSpan(10));
                 Console.WriteLine("Middle");
-                //CityByGeo response;
+                CityByGeo response;
                 String cityName;
                 var location = await Geolocation.GetLocationAsync(request);
                 
@@ -69,10 +69,10 @@ namespace Web.Views
                 if (location != null)
                 {
                     Console.WriteLine($"Latitude: {location.Latitude.ToString()}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
-                    //response = await viewModel.DataStore.requestMakerByCoords(location.Latitude.ToString(), location.Longitude.ToString());
-                    //cityName = location.;//response.results[0].components.city;
-                    var placemarks = await Geocoding.GetPlacemarksAsync(location.Latitude, location.Longitude);
-                    cityName = placemarks.FirstOrDefault().Locality;
+                    response = await viewModel.DataStore.requestMakerByCoords(location.Latitude.ToString(), location.Longitude.ToString());
+                    cityName = response.results[0].components.city;
+                    //var placemarks = await Geocoding.GetPlacemarksAsync(location.Latitude, location.Longitude);
+                    //cityName = placemarks.FirstOrDefault().Locality;
                     if (!Application.Current.Properties.ContainsKey(cityName))
                     {
                         viewModel.AddMyCity(cityName);
@@ -103,7 +103,7 @@ namespace Web.Views
             if (viewModel.CityResponses.Count == 0)
                 viewModel.LoadItemsCommand.Execute(null);
         }
-        void Delete_Clicked(object sender, EventArgs e)
+        async void Delete_Clicked(object sender, EventArgs e)
         {
             //MessagingCenter.Send(this, "AddItem", Item);
             var button = sender as Button;
@@ -113,8 +113,10 @@ namespace Web.Views
             {
                 return x.name == label.Text;
             }).FirstOrDefault();
+          
             Application.Current.Properties.Remove(label.Text);
-            Application.Current.SavePropertiesAsync();
+            await Application.Current.SavePropertiesAsync();
+            
 
             viewModel.DataStore.RemoveItem(toDelete);
             viewModel.LoadItemsCommand.Execute(null);
