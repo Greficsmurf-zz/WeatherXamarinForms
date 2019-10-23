@@ -56,3 +56,7 @@ C:\Users\grefi\source\repos\Web\Web\Web.iOS\obj\iPhone\Debug\XamlC.stamp
 C:\Users\grefi\source\repos\Web\Web\Web.iOS\obj\iPhone\Debug\Web.iOS.csproj.CopyComplete
 C:\Users\grefi\source\repos\Web\Web\Web.iOS\obj\iPhone\Debug\Web.iOS.exe
 C:\Users\grefi\source\repos\Web\Web\Web.iOS\obj\iPhone\Debug\Web.iOS.pdb
+C:\Users\grefi\source\repos\Web\Web\Web.iOS\bin\iPhone\Debug\Mono.Android.dll
+C:\Users\grefi\source\repos\Web\Web\Web.iOS\bin\iPhone\Debug\Mono.Android.pdb
+C:\Users\grefi\source\repos\Web\Web\Web.iOS\bin\iPhone\Debug\Mono.Android.xml
+C:\Users\grefi\source\repos\Web\Web\Web.iOS\obj\iPhone\Debug\Web.iOS.csprojAssemblyReference.cache
