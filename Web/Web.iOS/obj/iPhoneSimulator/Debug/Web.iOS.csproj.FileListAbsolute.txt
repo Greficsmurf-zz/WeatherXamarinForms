@@ -57,3 +57,6 @@ C:\Users\grefi\source\repos\Web\Web\Web.iOS\obj\iPhoneSimulator\Debug\XamlC.stam
 C:\Users\grefi\source\repos\Web\Web\Web.iOS\obj\iPhoneSimulator\Debug\Web.iOS.csproj.CopyComplete
 C:\Users\grefi\source\repos\Web\Web\Web.iOS\obj\iPhoneSimulator\Debug\Web.iOS.exe
 C:\Users\grefi\source\repos\Web\Web\Web.iOS\obj\iPhoneSimulator\Debug\Web.iOS.pdb
+C:\Users\grefi\source\repos\Web\Web\Web.iOS\bin\iPhoneSimulator\Debug\Mono.Android.dll
+C:\Users\grefi\source\repos\Web\Web\Web.iOS\bin\iPhoneSimulator\Debug\Mono.Android.pdb
+C:\Users\grefi\source\repos\Web\Web\Web.iOS\bin\iPhoneSimulator\Debug\Mono.Android.xml

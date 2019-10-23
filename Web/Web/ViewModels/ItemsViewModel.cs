@@ -13,6 +13,7 @@ using Web.Interfaces;
 
 namespace Web.ViewModels
 {
+
     public class ItemsViewModel : BaseViewModel
     {
         public ObservableCollection<Item> Items { get; set; }

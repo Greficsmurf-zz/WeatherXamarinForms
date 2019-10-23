@@ -6,6 +6,8 @@ using Web.Views;
 
 namespace Web
 {
+    [Android.Runtime.Preserve(AllMembers = true)]
+
     public partial class App : Application
     {
 

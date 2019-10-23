@@ -5,6 +5,7 @@ using Xamarin.Forms;
 
 namespace Web.ViewModels
 {
+
     public class AboutViewModel : BaseViewModel
     {
         public AboutViewModel()

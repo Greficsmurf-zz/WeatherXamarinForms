@@ -10,6 +10,7 @@ using Web.Services;
 
 namespace Web.ViewModels
 {
+
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<CityResponse> DataStore => DependencyService.Get<IDataStore<CityResponse>>();

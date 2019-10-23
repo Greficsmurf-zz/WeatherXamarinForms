@@ -13,6 +13,7 @@ using System.Linq;
 
 namespace Web.ViewModels
 {
+
     public class NewItemViewModel : BaseViewModel
     {
         //public IDataStore<CityResponse> DataStore => DependencyService.Get<IDataStore<CityResponse>>();

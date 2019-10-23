@@ -4,6 +4,7 @@ using Web.Models;
 
 namespace Web.ViewModels
 {
+
     public class ItemDetailViewModel : BaseViewModel
     {
         public Item Item { get; set; }

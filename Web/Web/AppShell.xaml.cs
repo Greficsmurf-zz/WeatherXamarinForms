@@ -5,6 +5,8 @@ using Xamarin.Forms;
 
 namespace Web
 {
+    [Android.Runtime.Preserve(AllMembers = true)]
+
     public partial class AppShell : Xamarin.Forms.Shell
     {
         public AppShell()
